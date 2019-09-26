@@ -8,7 +8,7 @@ function draw() {
   background('Green');
   fill(0);
 
- text('This is Skwerm the caterpillar. Although a small creature, he and his kind \
+ text('This is Skwerm the caterpillar. He lives in a tree stump. Although a small creature, he and his kind \
   are very beneficial to the realm of Aldervaire. During the day he is \
  practically undetectable as he blends into almost everything. But at night,\
  he produces this iredescense that can change any color and is bright enough\
@@ -38,6 +38,28 @@ if(mouseIsPressed){
   fill(255, 52, 179);
   ellipse(150, 150, 50, 50);
 
+  fill(169, 169, 169);
+  rect(167, 300, 120, 200);
+
+  fill(169, 169, 169);
+  triangle(192,350,200, 50);
+
+  fill(169, 169, 169);
+  triangle(250, 320, 300, 60);
+
+  fill(128, 128, 128);
+  triangle(215, 360, 190, 390, 220, 400);
+
+  fill(128, 128, 128);
+  triangle(245, 420, 240, 440, 270, 435);
+
+  fill(128, 128, 128);
+  ellipse(200, 460,10, 5);
+
+  fill(128, 128, 128);
+  ellipse(260, 455, 15, 10);
+
+
 }else{
   //fill(255, 250, 250);
 //  rect(460,380,200,40);
@@ -58,6 +80,27 @@ ellipse(130, 130, 50, 50);
 
 fill(122, 139, 139);
 ellipse(150, 150, 50, 50);
+
+fill('brown');
+rect(167, 300, 120, 200);
+
+fill('brown');
+triangle(192,350,200, 50);
+
+fill('brown');
+triangle(250, 320, 300, 60);
+
+fill('black');
+triangle(215, 360, 190, 390, 220, 400);
+
+fill('black');
+triangle(245, 420, 240, 440, 270, 435);
+
+fill('black');
+ellipse(200, 460,10, 5);
+
+fill('black');
+ellipse(260, 455, 15, 10);
 }
 fill(255);
 text(mouseX + ',' + mouseY, 20, 20);
