@@ -1,6 +1,7 @@
 var myState = 0;
 var timer = 100;
 var x = 0;
+var myText;
 
 
 function setup() {
@@ -8,57 +9,66 @@ function setup() {
   createCanvas(800, 800);
   rectMode(CENTER);
   ellipseMode(CENTER);
+  myText = loadFont('assets/PlayfairDisplay-Regular.ttf');
 }
 
 function draw() {
   // put drawing code here
+  textFont(myText);
+
   switch (myState) {
     case 0:
-      text("Welcome to my Sustainability Secret! Click to continue.")
+      background('grey');
+      textSize(30);
+      text("Welcome to my Sustainability Secret! \n Click to continue.", 200, 250);
       break;
 
     case 1:
+      background('grey');
+      text("Wait for it...", 200, 250);
       timer = timer - 1;
       if (timer <= 0) {
         timer = 100;
         myState = myState + 1;
-        if (myState >= 5) {
-          myState = 0;
-        }
-        break;
-
-        case 2:
-          fill('white');
-        rect(width/2, height/2, 150, 300);
-        fill('brown');
-        ellipse(252, 144, 72, 72)
-        break;
-
-        case 3:
-          background("yellow");
-        text("COFFEE! YUM!!!", x, 100);
-        fill('white');
-      rect(width/2, height/2, 150, 300);
-      fill('brown');
-      ellipse(252, 144, 72, 72)
-        break;
-
-        case 4:
-          fill('pink');
-        text("BE HAPPY", x, 100);
-        x += 5;
-        if (x > 200) {
-          x = 0;
-        }
-        break;
-
-
       }
-  }
+      break;
 
-  function mouseReleased() {
-    myState = myState + 1;
-    if (myState > 1) {
-      myState = 0;
-    }
+    case 2:
+      background('pink');
+      text("Click on the coffee cup.", 200, 250);
+      fill('white');
+      rect(width / 2, height / 2, 150, 200);
+      //fill('brown');
+      //ellipse(width/2, height/2 - 40, 150, 60);
+      break;
+
+    case 3:
+      background("yellow");
+      text("COFFEE! YUM!!! Click to finish.", 200, 250);
+      fill('white');
+      rect(width / 2, height / 2 + 25, 150, 200);
+      fill('brown');
+      ellipse(width / 2, height / 2 - 70, 150, 60);
+      break;
+
+    case 4:
+      background('gray')
+      fill('pink');
+      textSize(200);
+      text("BE \n HAPPY", x, 200);
+      x += 5;
+      if (x > width) {
+        x = -500;
+      }
+      break;
+
+
   }
+}
+
+function mouseReleased() {
+  myState = myState + 1;
+  if (myState > 4) {
+    myState = 0;
+  }
+}
