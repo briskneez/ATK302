@@ -2,6 +2,11 @@ var myState = 0;
 var timer = 100;
 var x = 0;
 var myText;
+var song;
+
+function preload(){
+  song = loadSound('assets/looping.wav');
+}
 
 
 function setup() {
@@ -10,6 +15,7 @@ function setup() {
   rectMode(CENTER);
   ellipseMode(CENTER);
   myText = loadFont('assets/PlayfairDisplay-Regular.ttf');
+  song.play();
 }
 
 function draw() {
