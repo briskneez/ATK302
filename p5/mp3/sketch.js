@@ -9,11 +9,17 @@ var fish;
 var hook;
 var winner;
 var loser;
+var song;
+
+function preload(){
+  song = loadSound('assets/underSea.mp3');
+}
 
 function setup() {
   underwater1 = loadImage('assets/underwater1.jpg');
   underwater2 = loadImage('assets/underwater2.jpg');
   createCanvas(800, 800);
+    song.play();
 
   //spawn the cars
   for (var i = 0; i < 8; i++) {
