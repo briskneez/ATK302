@@ -10,6 +10,7 @@ var hook;
 var winner;
 var loser;
 var song;
+var x = 0;
 
 function preload(){
   song = loadSound('assets/underSea.mp3');
@@ -48,7 +49,11 @@ function draw() {
   switch (myState) {
     case 0:
       image(underwater1, width/2, height/2, width, height);
-
+      image(fish, x, 650);
+      x +=5;
+      if( x > 950){
+        x = 0;
+      }
       textSize(70);
       text('Welcome to Fish Catch! Click to Play', width / 2, height / 2 +70, 500, 400);
       fill('black');
