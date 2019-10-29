@@ -63,7 +63,7 @@ function draw() {
 //frog
   //fill('green');
   //ellipse(frogPos.x, frogPos.y, 50, 50);
-  image(bunnyImage, frogPos.x, frogPos.y, 500, 500);
+  image(bunnyImage, frogPos.x, frogPos.y, 100, 100);
   checkForKeys(); //this moves the frog
 
   // DECORATIONS
