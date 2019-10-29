@@ -83,6 +83,8 @@ function draw() {
  text("x = " + x.toFixed(2), 25, 150); // .toFixed means just show (x) decimal places
  text("y = " + y.toFixed(2), 25, 170);
  text("z = " + z.toFixed(4), 25, 190);
+ frogPos.x= xPosition;
+ frogPos.y= yPosition;
 
  // HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
 
