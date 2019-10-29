@@ -27,7 +27,7 @@ function setup() {
     cars.push(new Car());
   }
 
-  frogPos = createVector(width/2, height-80);
+  frogPos = createVector(0, 0);
 
 }
 
