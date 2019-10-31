@@ -41,8 +41,8 @@ function draw() {
     case 1:
     background(200) ;
     text("we have weather", 20, 20) ;
-    text("humidity = " + weather.main.humidity, 20, 40);
     text("temperature = " + weather.main.temp, 20, 80);
+    text("humidity = " + weather.main.humidity, 20, 40);
     text("windspeed = " + weather.wind.speed, 20, 60);
     text("country = " + weather.sys.country, 20, 100);
 
