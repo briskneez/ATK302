@@ -57,14 +57,16 @@ function Circle(myTime, myTeam) {
 
 
   this.display = function() {
-    //   if (this.team == "Circle"){
-    //   ellipse(this.pos.x, this.pos.y, 100, 100);
-    // } else {
-    //     rect(this.pos.x, this.pos.y, 100, 100);
-    // }
+      if (this.team == "Team"){
+      ellipse(this.pos.x, this.pos.y, 100, 100);
+    } else {
 
-    rect(this.pos.x, this.pos.y, 100, 100);
+        rect(this.pos.x, this.pos.y, 100, 100);
+    }
+
+    ellipse(this.pos.x, this.pos.y, 100, 100);
     text(this.team, this.pos.x, this.pos.y);
+
 
 
   }
