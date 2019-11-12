@@ -185,3 +185,6 @@ function game() {
   //  ellipse(frogPos.x, frogPos.y, 60, 60) ;
   checkForKeys();
 }
+function touchStarted() {
+  getAudioContext().resume();
+}
